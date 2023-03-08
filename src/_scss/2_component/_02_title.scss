@@ -1,0 +1,36 @@
+/*------------------------------------------------------------
+title
+------------------------------------------------------------*/
+
+
+/*
+------------------------------------------------------------*/
+.c-pagetitle {
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 20.8%;
+    position: relative;
+
+    &__main {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 70%;
+        left: 45%;
+        letter-spacing: 0;
+        color: #fefefe;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    &__heading {
+        font-family: $font-itc;
+        font-weight: 400;
+        font-size: 5rem;
+        text-transform: uppercase;
+    }
+
+    &__sub {
+        font-weight: 700;
+        font-size: 2.4rem;
+    }
+}

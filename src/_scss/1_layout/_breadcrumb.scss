@@ -1,0 +1,31 @@
+/* Breadcrumb
+------------------------------------------------------------*/
+.c-breadcrumb {
+    &__list {
+        padding: 30px 0;
+        border-bottom: 1px solid #ccc;
+    }
+
+    &__item {
+        display: inline-block;
+        font-size: 1.3rem;
+        font-weight: 400;
+        letter-spacing: 0;
+        color: #000;
+
+        &::before {
+            content: ">";
+            margin: 0 15px;
+        }
+    }
+
+    &__home {
+        color: $brand-color;
+        text-decoration: underline;
+        text-underline-offset: 5px;
+
+        &::before {
+            content: "";
+        }
+    }
+}

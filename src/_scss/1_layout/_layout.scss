@@ -1,0 +1,28 @@
+/* layout
+------------------------------------------------------------*/
+body {
+    font-family: $font-noto;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    font-feature-settings: "palt" 1;
+
+    @include sp {
+        min-width: 320px;
+    }
+}
+
+//-------------------------------------------------------
+
+//-------------------------------------------------------
+.l-container {
+    margin: 0 auto;
+    padding: 0 20px;
+
+    &--w1160 {
+        max-width: 1200px;
+    }
+
+    &--w780 {
+        max-width: 1020px;
+    }
+}

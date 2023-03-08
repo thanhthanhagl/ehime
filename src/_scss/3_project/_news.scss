@@ -1,0 +1,29 @@
+.p-news {
+    .c-header {
+        position: relative;
+
+        &__top {
+            display: none;
+        }
+    }
+
+    .c-pagetitle {
+        background-color: #edf9f8;
+        padding-bottom: 8.6%;
+
+        &__main {
+            top: 50%;
+            left: 50%;
+        }
+
+        &__heading {
+            color: $brand-color;
+            font-size: 4rem;
+            line-height: 1.875;
+        }
+
+        &__sub {
+            color: #000;
+        }
+    }
+}

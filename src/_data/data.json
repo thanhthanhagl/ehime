@@ -1,0 +1,34 @@
+{
+  "linklists": {
+    "main": [
+      {
+        "title": "企業一覧",
+        "url": "/404.html"
+      },
+      {
+        "title": "愛媛シゴト図鑑とは",
+        "url": "/404.html"
+      },
+      {
+        "title": "インタビュー",
+        "url": "/interview.html"
+      },
+      {
+        "title": "ニュース",
+        "url": "/news.html"
+      },
+      {
+        "title": "お問い合わせ",
+        "url": "/contact.html"
+      }
+    ]
+  },
+  "interview":[
+    {
+      "featureimg":"",
+      "category":"",
+      "title":"",
+      "subtitle":""
+    }
+  ]
+}

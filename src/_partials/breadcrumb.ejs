@@ -1,0 +1,20 @@
+<% if(id !='p-top' ){ %>
+    <div class="c-pagetitle">
+        <div class="c-pagetitle__main">
+            <h1 class="c-pagetitle__heading"><%- name -%></h1>
+            <p class="c-pagetitle__sub"><%- subname -%></p>
+        </div>
+    </div>
+    <div class="c-breadcrumb">
+        <div class="l-container l-container--w1160">
+            <ul class="c-breadcrumb__list">
+                <li class="c-breadcrumb__item c-breadcrumb__home"><a href="<%= BASE_URL %>index.html"
+                        class="c-breadcrum__text">ホーム</a></li>
+                <% if(category) {%>
+                    <li class="c-breadcrumb__item"><span class="c-breadcrum__text"><%- category -%></span></li>
+                    <% }%>
+                        <li class="c-breadcrumb__item"><span class="c-breadcrum__text"><%- breadcrumb -%></span></li>
+            </ul>
+        </div>
+    </div>
+    <% } %>
