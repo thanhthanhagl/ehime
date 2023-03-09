@@ -2,8 +2,114 @@
 footer
 ------------------------------------------------------------*/
 .c-footer {
-    padding: 20px;
-    background: #051a2b;
     color: #fff;
-    text-align: center;
+
+    .c-footer__main {
+        background-color: $brand-color;
+    }
+
+    .c-footer__contents {
+        display: flex;
+        justify-content: space-between;
+    }
+    .c-footer__col{
+        padding: 14px 0;
+        width: 34.3%;
+        &:first-child{
+            padding: 20px 0 23px;
+            border-right: 1px solid #80d6d0;       
+            width: 36.3%;       
+        }
+        &:last-child{
+            width: 25.9%;
+            padding: 2px 0;
+        }
+    }
+    .c-footer__logo{
+        display: block;
+        margin-bottom: 14px;
+    }
+    .c-footer__text{
+        font-size: 1.4rem;
+        letter-spacing: 0;
+        line-height: 1.8;
+        font-weight: 400;
+    }
+    .c-footer__textfs13{
+        font-size: 1.3rem;
+        letter-spacing: 0;
+        line-height: 1.9;
+        font-weight: 400;
+        margin-bottom: 4px;
+    }
+
+    .c-footer__bottom {
+        background-color: #33bdb3;
+    }
+
+    .c-footer__tel {
+        color: #fff;
+        font-weight: 400;
+        font-size: 2.6rem;
+        line-height: 1;
+        letter-spacing: 0;
+        margin-bottom: 14px;
+    }
+    .c-footer__telnumber {
+        color: #fff;
+        font-weight: 400;
+        letter-spacing: 0;
+        font-size: 4.1rem;
+        line-height: 1.1;
+    }
+    .c-footer__time {
+        color: $brand-color;
+        background-color: #fff;
+        font-weight: 700;
+        letter-spacing: 0;
+        font-size: 1.4rem;
+        line-height: 1.7;
+        text-align: center;
+        padding: 0 5% 0 6%;
+        max-width: 313px;
+    }
+    .c-footer__timetxt{
+        margin-left: 11px;
+        display: inline-block;
+    }
+
+    .c-footer__btn {
+        color: #fff;
+        display: block;
+        border: 2px solid #fff;
+        background-color: $brand-color;
+        margin: 18px auto;
+        font-size: 1.4rem;
+        letter-spacing: 0;
+        line-height: 1.8;
+        font-weight: 700;
+        text-align: center;
+        padding: 10px;
+        &:hover{
+            opacity: 1;
+            background-color: #fbfbfb;
+            color: #00a99d;
+        }
+    }
+    .c-footer__inner{
+        padding: 15px 0 29px;
+    }
+
+    .c-footer__copyright {
+        text-align: center;
+        font-size: 1.3rem;
+        line-height: 1.9;
+        letter-spacing: 0;
+    }
+}
+.is-call{
+    pointer-events: none;
+    @include tab{
+        pointer-events: initial;
+    }
 }

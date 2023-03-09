@@ -2,7 +2,7 @@
     .c-header {
         position: relative;
 
-        &__top {
+        .c-header__top {
             display: none;
         }
     }
@@ -11,18 +11,18 @@
         background-color: #edf9f8;
         padding-bottom: 8.6%;
 
-        &__main {
+        .c-pagetitle__main {
             top: 50%;
             left: 50%;
         }
 
-        &__heading {
+        .c-pagetitle__heading {
             color: $brand-color;
             font-size: 4rem;
             line-height: 1.875;
         }
 
-        &__sub {
+        .c-pagetitle__sub {
             color: #000;
         }
     }

@@ -1,12 +1,12 @@
 /* Breadcrumb
 ------------------------------------------------------------*/
 .c-breadcrumb {
-    &__list {
-        padding: 30px 0;
+    .c-breadcrumb__list {
+        padding: 25px 0 33px;
         border-bottom: 1px solid #ccc;
     }
 
-    &__item {
+    .c-breadcrumb__item {
         display: inline-block;
         font-size: 1.3rem;
         font-weight: 400;
@@ -19,13 +19,14 @@
         }
     }
 
-    &__home {
+    .c-breadcrumb__home {
         color: $brand-color;
         text-decoration: underline;
-        text-underline-offset: 5px;
+        text-underline-offset: 7px;
 
         &::before {
             content: "";
+            margin: 0;
         }
     }
 }

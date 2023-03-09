@@ -25,10 +25,101 @@
   },
   "interview":[
     {
-      "featureimg":"",
-      "category":"",
-      "title":"",
+      "featureimg":"./assets/img/interview/post1.jpg",
+      "category":"経営者インタビュー",
+      "title":"就活には業界研究を<br>愛媛県の企業冊子を作成",
+      "subtitle":"愛媛大学理学部物理学科　教授"
+    },
+    {
+      "featureimg":"./assets/img/interview/post2.jpg",
+      "category":"就活コラム",
+      "title":"他人も巻き込み 一生使える自己分析を",
+      "subtitle":"(株)四国中央キャリア　代表取締役"
+    },
+    {
+      "featureimg":"./assets/img/interview/post3.jpg",
+      "category":"経営者インタビュー",
+      "title":"社会の変化に迅速に対応<br>業種を超えた事業展開も",
+      "subtitle":"(株)愛媛銀行 頭取"
+    },
+    {
+      "featureimg":"./assets/img/interview/post4.jpg",
+      "category":"就活コラム",
+      "title":"県内食品業界はもちろん、愛媛全域が盛り上がるようなイベントを。",
       "subtitle":""
+    },
+    {
+      "featureimg":"./assets/img/interview/post5.jpg",
+      "category":"経営者インタビュー",
+      "title":"興味を持ち追求すること それが私の仕事の原動力",
+      "subtitle":"大王海運グループ"
+    },    
+    {
+      "featureimg":"./assets/img/interview/post6.jpg",
+      "category":"経営者インタビュー",
+      "title":"事前の知識や資格は不要 「お年寄りが好き」で十分",
+      "subtitle":"株式会社悠遊社"
+    },
+    {
+      "featureimg":"./assets/img/interview/post7.jpg",
+      "category":"社員インタビュー",
+      "title":"事前の知識や資格は不要 「お年寄りが好き」で十分",
+      "subtitle":"株式会社悠遊社"
+    },
+    {
+      "featureimg":"./assets/img/interview/post8.jpg",
+      "category":"経営者インタビュー",
+      "title":"循環器主体に地域医療を支え続けて35年 外科を含めた緊急・救急対応にも意欲",
+      "subtitle":"喜多医師会病院 病院長"
+    },
+    {
+      "featureimg":"./assets/img/interview/post9.jpg",
+      "category":"就活コラム",
+      "title":"就活経験者　匿名インタビュー2",
+      "subtitle":"就活経験者"
+    }
+  ],
+  "news":[
+    {
+      "date":"2019.03.08",
+      "title":"2020年「新卒会社説明会」日程について"
+    },
+    {
+      "date":"2019.03.07",
+      "title":"愛work Challenge！2020 合同会社説明会について" 
+    },
+    {
+      "date":"2019.03.06",
+      "title":"八幡浜みなっと みなと交流館館長の経営者インタビューを更新しました" 
+    },
+    {
+      "date":"2018.10.15",
+      "title":"新しい社員インタビューを更新しました" 
+    },
+    {
+      "date":"2018.10.15",
+      "title":"テキストテキストテキストテキストテキストテキストテキストテキストテキスト"
+    },
+    {
+      "date":"2018.10.15",
+      "title":"テキストテキストテキストテキストテキストテキストテキストテキストテキスト"
+    },
+    {
+      "date":"2018.10.15",
+      "title":"テキストテキストテキストテキストテキストテキストテキストテキストテキスト"
+    },
+    {
+      "date":"2018.10.15",
+      "title":"テキストテキストテキストテキストテキストテキストテキストテキストテキスト"
+    },
+    {
+      "date":"2018.10.15",
+      "title":"テキストテキストテキストテキストテキストテキストテキストテキストテキスト"
+    },
+    {
+      "date":"2018.10.15",
+      "title":"テキストテキストテキストテキストテキストテキストテキストテキストテキスト"
     }
   ]
 }
+ 

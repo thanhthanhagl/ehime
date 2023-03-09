@@ -1,10 +1,11 @@
-<%- include('_layouts/layout', { title: 'インタビュー',id:'p-interview', name:'interview', subname:'インタビュー',category:'',breadcrumb:'インタビュー' }); -%>
+<%- include('_layouts/layout', { title: 'インタビュー',id:'p-interview', name:'interview', subname:'インタビュー一覧',category:'',breadcrumb:'インタビュー一覧' }); -%>
 
 <!-- @meta -->
 <meta name="description" content="Interview">
 <!-- @@meta -->
 
 <!-- @content -->
-<div class="c-desc">就活に役立つコラムと<br>週刊愛媛経済レポート連載の経営者インタビューを紹介！</div>
+<%- include('_partials/list'); -%>
+<%- include('_partials/pagination'); -%>
 </main>
 <!-- @@content -->

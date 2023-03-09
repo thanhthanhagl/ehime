@@ -5,12 +5,32 @@
     z-index: 99;
     width: 100%;
 
-    &__main {
-        margin: 16px auto 0;
+    @include tab {
+        position: relative;
+
+        .l-container {
+            padding: 0;
+        }
     }
 
-    &__top {
+    .c-header__main {
+        margin: 13px auto 0;
+
+        @include tab {
+            margin: 0 auto;
+        }
+    }
+
+    .c-header__top {
         text-align: right;
+        margin-bottom: 15px;
+
+        @include tab {
+            display: none;
+        }
+    }
+
+    .c-header__topbtn {
 
         &::after {
             content: "";
@@ -18,12 +38,14 @@
             border-radius: 50%;
             width: 20px;
             height: 20px;
-            background: url("/images/common/arrow.svg") no-repeat center/cover;
+            background: url("./assets/img/common/arrow.svg") no-repeat center/cover;
             margin-left: 12px;
+            position: relative;
+            top: 4px;
         }
     }
 
-    &__toptext {
+    .c-header__toptext {
         font-weight: 400;
         font-size: 1.4rem;
         line-height: 1.4;
@@ -32,12 +54,16 @@
         vertical-align: text-top;
     }
 
-    &__content {
+    .c-header__content {
         display: flex;
         align-items: center;
         background-color: #fff;
-        padding: 0 0 0 20px;
+        padding: 0 0 0 21px;
         margin: 12px auto 0;
+
+        @include tab {
+            margin: 0 auto;
+        }
 
         &.is-open {
             position: fixed;
@@ -47,87 +73,153 @@
         }
     }
 
-    &__logo {
-        padding: 20px 0;
+    .c-header__logo {
+        padding: 1% 0;
         width: 26%;
 
-        a {
-            display: block;
-            width: 100%;
-            height: 100%;
-            transition: 0.3s all;
-
-            &:hover {
-                opacity: 0.7;
-            }
+        @include sp {
+            max-width: 165px;
+            width: 45%;
         }
     }
 
-    &__nav {
-        width: 65%;
+    .c-header__nav {
+        width: 70%;
         margin-left: auto;
+
+        @include tab {
+            width: 50%;
+            display: flex;
+            justify-content: flex-end;
+        }
     }
 
-    &__list {
+    .c-header__list {
         height: 100%;
         display: flex;
         justify-content: flex-end;
+
+        @include tab {
+            width: 50%;
+        }
     }
 
-    &__item {
+    .c-header__item {
+        margin-left: 0.7em;
+
         &:last-child {
-            width: 23.2%;
+            width: 21.5%;
+            margin-left: 2em;
             background-color: $brand-color;
 
-            a {
+            .c-header__navlink {
                 color: #fff;
             }
-        }
 
-        &:not(:first-child) {
-            margin-left: 2.2em;
-        }
+            @include tab {
+                width: 100%;
+                max-width: 70px;
+                margin-left: 0;
+            }
 
-        &>a {
-            font-size: clamp(1.2rem, 1.5vw, 1.6rem);
-            font-feature-settings: "palt" 1;
-            font-weight: bold;
-            padding: 0 0.5em;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: 0.3s all;
-            letter-spacing: 0;
-
+            .c-header__navtext {
+                @include tab {
+                    padding: 15px 5px;
+                    &::before {
+                        content: "\f0e0";
+                        display: block;
+                        font-family: "Font Awesome 5 Free";
+                        font-weight: 400;
+                        font-size: 3rem;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }        
+        &:not(:last-child) {
             &:hover {
-                opacity: 0.7;
+                background-color: $brand-color;
+
+                .c-header__navlink {
+                    opacity: 1;
+                    color: #fff;
+                }
             }
 
-            span {
-                text-align: center;
-                display: block;
-                padding: 2.1em 0;
+            @include tab {
+                display: none;
             }
         }
+    }
+
+    .c-header__navlink {
+        font-size: clamp(1.4rem, 1.2vw, 1.6rem);
+        font-feature-settings: "palt" 1;
+        font-weight: bold;
+        line-height: 1.25;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s all;
+        letter-spacing: 0;
+        @include tab{
+            font-size: 1rem;
+        }
+    }
+
+    .c-header__navtext {
+        text-align: center;
+        display: block;
+        padding: 2.2em 1.25em 2.25em;
     }
 }
 
-/* Main menu
-------------------------------------------------------------*/
-.c-gnav {
-    ul {}
+//Menu mobile
+.c-menu {
+    display: none;
 
-    li {
-        display: inline-block;
-
-        +li {
-            margin-left: 20px;
+    @include tab {
+        display: block;
+        width: 50%;
+        background-color: #000;
+        color: #fff;
+        padding: 15px 10px;
+        text-align: center;
+        max-width: 70px;
+        &.is-open{
+            .c-menu__line {
+                &:nth-child(1){
+                    transform: translateY(12px) rotate(-45deg);
+                }
+                &:nth-child(2){
+                    opacity: 0;
+                }
+                &:nth-child(3){
+                    transform: translateY(-9px) rotate(45deg);
+                }
+            }
         }
     }
+    
+    .c-menu__line{
+        display: block;
+        margin: 0 auto 9px;
+        background-color: #fff;
+        height: 2px;
+        max-width: 30px;
+        width: 100%;
+        transition: 0.3s all;
+    }
 
-    a {
-        font-size: 1.6rem;
-        text-transform: capitalize;
+    .c-menu__text {
+        font-weight: 700;
+        font-size: 1.2rem;
+        letter-spacing: 0;
+        line-height: 1.25;
+
+        @include sp {
+            font-size: 1rem;
+        }
     }
 }

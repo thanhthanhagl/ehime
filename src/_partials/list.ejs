@@ -1,0 +1,41 @@
+<!-- start section list post -->
+<section class="c-list">
+    <div class="l-container l-container--w1160">
+        <h2 class="c-list__title">就活に役立つコラムと<br>週刊愛媛経済レポート連載の経営者インタビューを紹介！</h2>
+        <div class="c-list__label">
+            <ul class="c-list__cat">
+                <li class="c-list__catitem is-active">すべて</li>
+                <li class="c-list__catitem">会社説明会2020</li>
+                <li class="c-list__catitem">就活コラム</li>
+                <li class="c-list__catitem">経営者インタビュー</li>
+            </ul>
+        </div>
+        <div class="c-list__posts">
+            <% if(typeof interview !='undefined' ){ interview.forEach(item=> { %>
+                <div class="c-list__post">
+                    <a href="./interview_single.html" class="c-list__wrap">
+                        <div class="c-list__ptop">
+                            <div class="c-list__pfeatureimg"><img src="<%= item.featureimg %>" alt="<%- item.title %>">
+                            </div>
+                            <div class="c-list__pcat">
+                                <%=item.category%>
+                            </div>
+                        </div>
+                        <div class="c-list__pbottom">
+                            <div class="c-list__pname">
+                                <h3 class="c-list__ptitle"><%-item.title%></h3>
+                                <div class="c-list__picon"></div>
+                            </div>
+                            <% if(item.subtitle){%>
+                                <p class="c-list__psubtitle">
+                                    <%=item.subtitle%>
+                                </p>
+                                <% }%>
+                        </div>
+                    </a>
+                </div>
+                <% })} %>
+        </div>
+    </div>
+</section>
+<!-- end section list post -->

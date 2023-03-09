@@ -4,11 +4,24 @@ btn
 
 /*
 ------------------------------------------------------------*/
-.c-btn1 {
-    display: inline-block;
-    padding: 10px 50px;
-    font-size: 1.6rem;
-    border: 2px solid #fff;
-    border-radius: 20px;
-    line-height: 1;
+.c-pagetop {
+    margin: 60px auto 0;
+    padding: 50px 0 30px;
+    width: 70px;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.7;
+    }
+
+    &::before {
+        content: "";
+        display: block;
+        margin: 0 auto;
+        background-image: url("./assets/img/common/pagetop.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 30px;
+        height: 20px;
+    }
 }

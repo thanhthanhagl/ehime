@@ -4,6 +4,214 @@ list
 
 /*
 ------------------------------------------------------------*/
-.c-list1 {
-	
+//-----list post-----
+.c-list {
+    padding-top: 23px;
+    padding-bottom: 17px;
+
+    .c-list__title {
+        text-align: center;
+        font-weight: 700;
+        font-size: 2.4rem;
+        letter-spacing: 0;
+        line-height: 1.5;
+        color: $text-color;
+    }
+
+    .c-list__label {
+        padding: 79px 0 25px;
+    }
+
+    .c-list__cat {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .c-list__catitem {
+        display: block;
+        margin-left: 20px;
+        padding: 0 27px 1px;
+        font-size: 1.6rem;
+        font-weight: 700;
+        letter-spacing: 0;
+        line-height: 2;
+        color: $text-color;
+        border: 2px solid #000;
+        border-radius: 18px;
+        background-color: #fff;
+        transition: 0.3s all;
+        cursor: pointer;
+
+        &:hover {
+            color: #fff;
+            background-color: rgb(0, 169, 157);
+            transition: 0.3s all;
+        }
+
+        &:first-child {
+            padding: 0 30px;
+        }
+
+        &.is-active {
+            color: #fff;
+            background-color: rgb(0, 169, 157);
+            border: none;
+            cursor: default;
+        }
+    }
+
+    .c-list__posts {
+        display: flex;
+        justify-content: space-between;
+        align-self: normal;
+        flex-wrap: wrap;
+        border-top: 1px solid #ccc;
+        @include sp{
+            max-width: 700px;
+            margin: 0 auto;
+        }
+    }
+
+    .c-list__post {
+        width: 28.5%;
+        max-width: 330px;
+        margin-bottom: 58px;
+        margin-top: 25px;
+        @include sp{
+            width: 48%;
+            margin-bottom: 25px;
+        }
+    }
+
+    .c-list__wrap {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .c-list__ptop {
+        width: 100%;
+        position: relative;
+    }
+
+    .c-list__pcat {
+        position: absolute;
+        bottom: -1px;
+        right: -1px;
+        padding: 0 10px 1px;
+        background-color: #fff;
+        color: $brand-color;
+        font-weight: 700;
+        font-size: 1.5rem;
+        line-height: 2;
+        letter-spacing: 0;
+        @include sp{
+            padding: 0 5px;
+            font-size: 1.2rem;
+            line-height: 1.5;
+        }
+    }
+
+    .c-list__pbottom {
+        background-color: #fff;
+        padding: 13px 0 15px;
+        color: $text-color;
+        letter-spacing: 0;
+    }
+
+    .c-list__pname {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include sp{
+            align-items: flex-start;
+        }
+    }
+
+    .c-list__picon {
+        width: 22px;
+        height: 20px;
+        background-image: url("./assets/img/interview/icon.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: relative;
+        top: 7px;
+        right: -2px;
+        @include sp{
+            top: 10px;
+        }
+    }
+
+    .c-list__ptitle {
+        font-weight: 600;
+        font-size: 1.6rem;
+        line-height: 1.6;
+        max-width: 300px;
+        width: 92%;
+        @include sp{
+            font-size: clamp(1.2rem,2.5vw,1.6rem);
+        }
+    }
+
+    .c-list__psubtitle {
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 2.8;
+        @include sp{
+            font-size: 1rem;
+        }
+    }
+}
+
+//-----pagination-----
+.c-pagi {
+    margin: 0 auto;
+
+    .c-pagi__list {
+        border-top: 1px solid #ccc;
+        padding: 50px 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .c-pagi__item {
+        display: block;
+        width: 46px;
+        height: 48px;
+        margin: 0 5px;
+        border: 3px solid #000;
+        background-color: #fff;
+        color: #000;
+        font-size: 2rem;
+        font-weight: 400;
+        text-align: center;
+        line-height: 1.25;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 1;
+            color: #fff;
+            background-color: #000;
+        }
+    }
+
+    .c-pagi__text {
+        display: block;
+        padding: 7px 6px 7px 4px;
+    }
+
+    .c-pagi__item.is-active {
+        color: #fff;
+        background-color: #000;
+    }
+
+    .c-pagi__prev,
+    .c-pagi__next {
+        border: none;
+        width: max-content;
+        font-size: 1.8rem;
+        font-weight: 700;
+        line-height: 1.4;
+        letter-spacing: 0;
+        padding: 4px 5px;
+    }
 }
