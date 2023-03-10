@@ -4,11 +4,49 @@ btn
 
 /*
 ------------------------------------------------------------*/
+.c-back {
+    display: block;
+    max-width: 450px;
+    width: 100%;
+    margin: 50px auto;
+    background-color: $brand-color;
+    padding: 20px;
+    font-weight: 700;
+    font-size: 1.6rem;
+    letter-spacing: 0;
+    line-height: 1.6;
+    color: #fff;
+    z-index: 1;
+    box-shadow: 4px 4px #000;
+    transition: 0.3s all;
+    position: relative;
+    text-align: center;
+
+    &::before {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-image: url("./assets/img/common/arrow.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        transform: translateY(-50%);
+    }
+}
+
 .c-pagetop {
     margin: 60px auto 0;
     padding: 50px 0 30px;
     width: 70px;
     cursor: pointer;
+
+    @include tab {
+        margin: 0 auto;
+        padding: 30px 0;
+    }
 
     &:hover {
         opacity: 0.7;
@@ -23,5 +61,10 @@ btn
         background-repeat: no-repeat;
         width: 30px;
         height: 20px;
+
+        @include sp {
+            background-image: url("./assets/img/common/pagetop_sp.svg");
+            width: 35px;
+        }
     }
 }

@@ -23,6 +23,38 @@
       }
     ]
   },
+  "menumb": {
+    "main": [
+      {
+        "title": "ホーム",
+        "url": "/"
+      },
+      {
+        "title": "企業一覧",
+        "url": "/404.html"
+      },
+      {
+        "title": "愛媛シゴト図鑑とは",
+        "url": "/404.html"
+      },
+      {
+        "title": "インタビュー",
+        "url": "/interview.html"
+      },
+      {
+        "title": "ニュース",
+        "url": "/news.html"
+      },
+      {
+        "title": "運営会社",
+        "url": "/404.html"
+      },
+      {
+        "title": "お問い合わせ",
+        "url": "/contact.html"
+      }
+    ]
+  },
   "interview":[
     {
       "featureimg":"./assets/img/interview/post1.jpg",

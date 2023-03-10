@@ -12,22 +12,18 @@
     src: url("./assets/font/FranklinGothic-Demi.woff2") format("woff2"),
         url("./assets/font/FranklinGothic-Demi.woff") format("woff"),
         url("./assets/font/FranklinGothic-Demi.ttf") format("truetype");
-    font-weight: normal;
+    font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
-
-.sp-only {
-    display: none;
-}
-@include sp {
-    .pc-only {
-        display: none;
-    }
-
-    .sp-only {
-        display: block;
-    }
+@font-face {
+    font-family: "Kozuka Gothic Pr6N";
+    src: url("KozGoPr6N-Regular-AlphaNum.woff2") format("woff2"),
+        url("KozGoPr6N-Regular-AlphaNum.woff") format("woff"),
+        url("KozGoPr6N-Regular-AlphaNum.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
 }
 
 /*≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
@@ -54,6 +50,7 @@
 @import "2_component/10_line";
 @import "2_component/11_video";
 @import "2_component/12_slide";
+@import "2_component/13_post";
 @import "2_component/99_other";
 
 /*≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡

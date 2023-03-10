@@ -4,47 +4,135 @@ footer
 .c-footer {
     color: #fff;
 
+    .l-container {
+        @include sp {
+            padding: 0;
+        }
+    }
+
     .c-footer__main {
         background-color: $brand-color;
+
+        @include sp {
+            padding: 31px 0;
+        }
     }
 
     .c-footer__contents {
         display: flex;
         justify-content: space-between;
+
+        @include sp {
+            flex-direction: column;
+        }
     }
-    .c-footer__col{
+
+    .c-footer__col {
         padding: 14px 0;
         width: 34.3%;
-        &:first-child{
-            padding: 20px 0 23px;
-            border-right: 1px solid #80d6d0;       
-            width: 36.3%;       
+
+        @include sp {
+            width: 100%;
+            text-align: center;
         }
-        &:last-child{
+
+        &:first-child {
+            padding: 20px 0 23px;
+            border-right: 1px solid #80d6d0;
+            width: 36.3%;
+
+            @include tab {
+                max-width: 500px;
+                padding-right: 20px;
+            }
+
+            @include sp {
+                width: 100%;
+                order: 3;
+                border: none;
+                margin: 20px auto 0;
+                max-width: 500px;
+                padding: 0;
+            }
+        }
+
+        &:nth-child(2) {
+            @include tab {
+                padding-right: 14px;
+            }
+            @include sp {
+                padding: 0 14px 0 15px;
+                margin: 0 auto;
+                max-width: 500px;
+            }
+        }
+
+        &:last-child {
             width: 25.9%;
             padding: 2px 0;
+            @include tab {                
+                padding: 20px 0 5px;
+            }
+
+            @include sp {
+                width: 100%;
+                order: 2;
+                border-top: 1px solid #f2f2f2;
+                border-bottom: 1px solid #f2f2f2;
+            }
         }
     }
-    .c-footer__logo{
+
+    .c-footer__logo {
         display: block;
         margin-bottom: 14px;
+
+        @include tab {
+            max-width: 270px;
+        }
+
+        @include sp {
+            margin: 14px auto 27px;
+        }
     }
-    .c-footer__text{
+
+    .c-footer__text {
         font-size: 1.4rem;
         letter-spacing: 0;
         line-height: 1.8;
         font-weight: 400;
+
+        &:first-child {
+            font-weight: 700;
+        }
+
+        @include tab {
+            line-height: 1.5;
+
+            &:first-child {
+                font-size: 1.3rem;
+            }
+
+            &:last-child {
+                font-size: 1.2rem;
+            }
+        }
     }
-    .c-footer__textfs13{
+
+    .c-footer__textfs13 {
         font-size: 1.3rem;
         letter-spacing: 0;
         line-height: 1.9;
         font-weight: 400;
         margin-bottom: 4px;
-    }
+        @include tab {
+            line-height: 1.5;
+        }
 
-    .c-footer__bottom {
-        background-color: #33bdb3;
+        @include sp {
+            text-align: center;
+            margin-bottom: 16px;
+        }
     }
 
     .c-footer__tel {
@@ -54,14 +142,29 @@ footer
         line-height: 1;
         letter-spacing: 0;
         margin-bottom: 14px;
+        @include tab {
+            font-size: 1.4rem;
+            line-height: 1.8;
+        }
+
+        @include sp {
+            margin-bottom: 18px;
+        }
     }
+
     .c-footer__telnumber {
         color: #fff;
         font-weight: 400;
         letter-spacing: 0;
         font-size: 4.1rem;
         line-height: 1.1;
+
+        @include tab {
+            font-size: 1.8rem;
+            line-height: 1.4;
+        }
     }
+
     .c-footer__time {
         color: $brand-color;
         background-color: #fff;
@@ -72,8 +175,20 @@ footer
         text-align: center;
         padding: 0 5% 0 6%;
         max-width: 313px;
+
+        @include tab {
+            font-size: 1.3rem;
+            line-height: 1;
+            margin: 0 auto 20px;
+            padding: 4px 9px 5px;
+        }
+        @include sp {
+            padding: 4px 29px 5px 27px;
+            max-width: 270px;
+        }
     }
-    .c-footer__timetxt{
+
+    .c-footer__timetxt {
         margin-left: 11px;
         display: inline-block;
     }
@@ -90,26 +205,50 @@ footer
         font-weight: 700;
         text-align: center;
         padding: 10px;
-        &:hover{
+
+        &:hover {
             opacity: 1;
             background-color: #fbfbfb;
             color: #00a99d;
         }
+        @include tab {
+            max-width: 246px;
+            font-size: 1.3rem;
+            line-height: 1;
+            padding: 8px 11px 10px;
+            margin: 0 auto 15px;
+            border-width: 1px;
+        }
     }
-    .c-footer__inner{
+
+    .c-footer__inner {
         padding: 15px 0 29px;
+        @include sp {
+            padding: 8px 0;
+        }
+    }
+
+    .c-footer__bottom {
+        background-color: #33bdb3;
     }
 
     .c-footer__copyright {
         text-align: center;
         font-size: 1.3rem;
+        font-weight: 400;
         line-height: 1.9;
         letter-spacing: 0;
+        @include sp {
+            font-size: 1.1rem;
+            line-height: 2.3;
+        }
     }
 }
-.is-call{
+
+.is-call {
     pointer-events: none;
-    @include tab{
+
+    @include tab {
         pointer-events: initial;
     }
 }

@@ -11,22 +11,29 @@
         font-size: 1.3rem;
         font-weight: 400;
         letter-spacing: 0;
-        color: #000;
-
-        &::before {
-            content: ">";
-            margin: 0 15px;
-        }
-    }
-
-    .c-breadcrumb__home {
+        line-height: 1.2;
         color: $brand-color;
         text-decoration: underline;
         text-underline-offset: 7px;
 
+        &:first-child {
+            &::before {
+                content: "";
+                margin: 0;
+            }
+        }
+
+        &:last-child {
+            color: #000;
+            text-decoration: none;
+        }
+
         &::before {
-            content: "";
-            margin: 0;
+            content: ">";
+            margin: 0 15px;
+            color: #000;
+            display: inline-block;
         }
     }
-}
+} 
+  

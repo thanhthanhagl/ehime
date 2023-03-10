@@ -1,0 +1,168 @@
+.c-post {
+    padding: 35px 0;
+
+    .c-post__top {
+        display: flex;
+
+        @include sp {
+            flex-direction: column;
+        }
+    }
+
+    .c-post__featureimg {
+        width: 50%;
+
+        @include sp {
+            width: 100%;
+            order: 2;
+        }
+
+        img {
+            object-fit: cover;
+        }
+    }
+
+    .c-post__box {
+        width: 50%;
+        background-color: #edf9f8;
+        padding-left: 40px;
+        position: relative;
+
+        @include sp {
+            width: 100%;
+            min-height: 300px;
+            order: 1;
+            padding: 20px;
+        }
+    }
+
+    .c-post__inner {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .c-post__date {
+        display: inline-block;
+        font-weight: 400;
+        font-size: 1.4rem;
+        letter-spacing: 0;
+        line-height: 1.8;
+        color: #000;
+        margin-right: 15px;
+    }
+
+    .c-post__cat {
+        font-weight: 700;
+        font-size: 1.5rem;
+        letter-spacing: 0;
+        line-height: 2.2;
+        color: #fff;
+        background-color: $brand-color;
+        display: inline-block;
+        width: max-content;
+        padding: 0 10px;
+    }
+
+    .c-post__title {
+        font-weight: 700;
+        font-size: 3rem;
+        letter-spacing: 0;
+        line-height: 1.5;
+        color: #000;
+    }
+
+    .c-post__info {
+        font-size: 1.4rem;
+        font-weight: 400;
+        letter-spacing: 0;
+        color: #000;
+        line-height: 2;
+    }
+
+    .c-post__name {
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 1.5;
+    }
+
+    .c-post__content {
+        padding: 100px 0;
+    }
+
+    .c-post__heading {
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 2;
+        letter-spacing: 0;
+        color: $brand-color;
+    }
+
+    .c-post__text {
+        color: #000;
+        font-weight: 400;
+        font-size: 1.6rem;
+        letter-spacing: 0;
+        line-height: 2.5;
+        margin-bottom: 56px;
+    }
+
+    .c-post__quote {
+        text-align: center;
+
+        &::before {
+            content: "";
+            display: block;
+            width: 100%;
+            max-width: 780px;
+            margin: 0 auto;
+            height: 25px;
+            background-image: url("./assets/img/interview/quote.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-bottom: 36px;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            max-width: 780px;
+            margin: 0 auto;
+            height: 25px;
+            background-image: url("./assets/img/interview/quote.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            transform: rotate(-180deg);
+            margin-top: 36px;
+        }
+    }
+
+    .c-post__qtitle {
+        color: #020000;
+        font-weight: 700;
+        font-size: 1.8rem;
+        letter-spacing: 0;
+        line-height: 1.67;
+        margin-bottom: 30px;
+    }
+
+    .c-post__listsocial {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .c-post__itemsocial {
+        width: calc((100% - 60px)/3);
+        text-align: center;
+        display: block;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 1.8rem;
+        letter-spacing: 0.01em;
+        line-height: 1.67;
+        color: #fff;
+        border-radius: 30px;
+        padding: 15px;
+    }
+}

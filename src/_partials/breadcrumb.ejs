@@ -8,10 +8,11 @@
     <div class="c-breadcrumb">
         <div class="l-container l-container--w1160">
             <ul class="c-breadcrumb__list">
-                <li class="c-breadcrumb__item c-breadcrumb__home"><a href="<%= BASE_URL %>index.html"
+                <li class="c-breadcrumb__item"><a href="<%= BASE_URL %>index.html"
                         class="c-breadcrum__text">ホーム</a></li>
                 <% if(category) {%>
-                    <li class="c-breadcrumb__item"><span class="c-breadcrum__text"><%- category -%></span></li>
+                    <li class="c-breadcrumb__item"><a href="<%- catlink -%>" class="c-breadcrum__text"><%-
+                                category -%></a></li>
                     <% }%>
                         <li class="c-breadcrumb__item"><span class="c-breadcrum__text"><%- breadcrumb -%></span></li>
             </ul>

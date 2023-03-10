@@ -1,7 +1,8 @@
 <header class="c-header">
   <div class="l-container l-container--w1160">
     <div class="c-header__main">
-      <div class="c-header__top"><a href="#" class="c-header__topbtn"><span class="c-header__toptext">掲載・取材依頼の企業様へ</span></a></div>
+      <div class="c-header__top"><a href="#" class="c-header__topbtn"><span
+            class="c-header__toptext">掲載・取材依頼の企業様へ</span></a></div>
       <div class="c-header__content">
         <div class="c-header__logo"><a href="<%= BASE_URL %>index.html"><img src="/assets/img/common/logo.png"
               alt="Ehime Shigoto Zukan"></a></div>
@@ -10,9 +11,10 @@
             <% if (typeof linklists !='undefined' ) { %>
               <% linklists.main && linklists.main.forEach(link=> { %>
                 <li class="c-header__item">
-                  <a class="c-header__navlink<% if (link.current || link.active) { %> is-active<% } %>" href="<%= link.url %>"><span class="c-header__navtext">
-                          <%= link.title %>
-                        </span></a>
+                  <a class="c-header__navlink<% if (link.current || link.active) { %> is-active<% } %>"
+                    href="<%= link.url %>"><span class="c-header__navtext">
+                      <%= link.title %>
+                    </span></a>
                 </li>
                 <% }) %>
                   <% } %>
@@ -23,6 +25,38 @@
             <span class="c-menu__line"></span>
             <p class="c-menu__text">メニュー</p>
           </div>
+        </nav>
+        <nav class="c-nav">
+          <div class="c-close">
+            <span class="c-close__line"></span>
+            <span class="c-close__line"></span>
+            <p class="c-close__text">閉じる</p>
+          </div>
+          <ul class="c-nav__list">
+            <% if (typeof menumb !='undefined' ) { %>
+              <% menumb.main && menumb.main.forEach(link=> { %>
+                <li class="c-nav__item">
+                  <a class="c-nav__link<% if (link.current || link.active) { %> is-active<% } %>"
+                    href="<%= link.url %>"><span class="c-nav__text">
+                      <%= link.title %>
+                    </span></a>
+                </li>
+                <% }) %>
+                  <% } %>
+          </ul>
+          <div class="c-nav__group">
+            <div class="c-nav__info">
+              <p class="c-nav__tel"><span>TEL.</span><a href="tel:0899471411"
+                class="c-nav__telnumber is-call">089-947-1411</a></p>
+            <p class="c-nav__time">受付時間9:00〜17:00（平日のみ）</p>
+            </div>
+          </div>
+          <a href="#" class="c-nav__btn">掲載・取材のご依頼についてはこちら</a>
+          <ul>
+            <li class="c-nav__item"><a href="#" class="c-nav__link"><span class="c-nav__text">プライバシーポリシー</span></a></li>
+            <li class="c-nav__item"><a href="#" class="c-nav__link"><span class="c-nav__text">利用規約</span></a></li>
+            <li class="c-nav__item"><a href="#" class="c-nav__link c-nav__close"><span class="c-nav__text">閉じる</span></a></li>
+          </ul>
         </nav>
       </div>
     </div>

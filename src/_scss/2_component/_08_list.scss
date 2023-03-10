@@ -16,15 +16,32 @@ list
         letter-spacing: 0;
         line-height: 1.5;
         color: $text-color;
+        @include tab {
+            font-size: 2rem;
+        }
+        @include sp {
+            font-size: 1.8rem;
+        }
     }
 
     .c-list__label {
         padding: 79px 0 25px;
+        @include tab {
+            padding: 50px 0 25px;
+        }
+        @include sp {
+            padding: 30px 0 25px;
+        }
     }
 
     .c-list__cat {
         display: flex;
         justify-content: flex-end;
+        @include sp {
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 0 auto;
+        }
     }
 
     .c-list__catitem {
@@ -41,6 +58,19 @@ list
         background-color: #fff;
         transition: 0.3s all;
         cursor: pointer;
+        @include sp {
+            width: max-content;
+            border-width: 1px;
+            font-size: 1.4rem;
+            padding: 0 15px;
+            margin-bottom: 10px;
+            margin-left: 0;
+            margin-right: 10px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
 
         &:hover {
             color: #fff;
@@ -66,7 +96,7 @@ list
         align-self: normal;
         flex-wrap: wrap;
         border-top: 1px solid #ccc;
-        @include sp{
+        @include sp {
             max-width: 700px;
             margin: 0 auto;
         }
@@ -77,7 +107,7 @@ list
         max-width: 330px;
         margin-bottom: 58px;
         margin-top: 25px;
-        @include sp{
+        @include sp {
             width: 48%;
             margin-bottom: 25px;
         }
@@ -104,7 +134,7 @@ list
         font-size: 1.5rem;
         line-height: 2;
         letter-spacing: 0;
-        @include sp{
+        @include sp {
             padding: 0 5px;
             font-size: 1.2rem;
             line-height: 1.5;
@@ -122,7 +152,7 @@ list
         display: flex;
         justify-content: space-between;
         align-items: center;
-        @include sp{
+        @include sp {
             align-items: flex-start;
         }
     }
@@ -136,7 +166,7 @@ list
         position: relative;
         top: 7px;
         right: -2px;
-        @include sp{
+        @include sp {
             top: 10px;
         }
     }
@@ -147,8 +177,8 @@ list
         line-height: 1.6;
         max-width: 300px;
         width: 92%;
-        @include sp{
-            font-size: clamp(1.2rem,2.5vw,1.6rem);
+        @include sp {
+            font-size: clamp(1.2rem, 2.5vw, 1.6rem);
         }
     }
 
@@ -156,7 +186,7 @@ list
         font-weight: 400;
         font-size: 1.4rem;
         line-height: 2.8;
-        @include sp{
+        @include sp {
             font-size: 1rem;
         }
     }
@@ -171,6 +201,9 @@ list
         padding: 50px 0;
         display: flex;
         justify-content: center;
+        @include sp {
+            padding: 30px 0;
+        }
     }
 
     .c-pagi__item {
@@ -186,6 +219,12 @@ list
         text-align: center;
         line-height: 1.25;
         cursor: pointer;
+        @include sp {
+            margin: 0 3px;
+            width: 34px;
+            height: 34px;
+            font-size: 1.6rem;
+        }
 
         &:hover {
             opacity: 1;
@@ -197,6 +236,9 @@ list
     .c-pagi__text {
         display: block;
         padding: 7px 6px 7px 4px;
+        @include sp {
+            padding: 4px 5px;
+        }
     }
 
     .c-pagi__item.is-active {
@@ -213,5 +255,9 @@ list
         line-height: 1.4;
         letter-spacing: 0;
         padding: 4px 5px;
+        @include sp {
+            font-size: 1.6rem;
+            padding: 3px 5px;
+        }
     }
 }

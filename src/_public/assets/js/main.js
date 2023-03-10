@@ -4,36 +4,52 @@ jQuery(function ($) {
     //------------------------------------
     var $body = $('body'),
         $header = $('.c-header'),
-        $menuButton = $('.c-menu'),
-        desktopMode = ($menuButton.css('display') != 'none');
-    function headerHeight() {
-        $headerHeight = $header.outerHeight();
-    }
-    headerHeight();
+        $menuButton = $('.c-menu');
 
     //
     // header-menu
     //------------------------------------
+    function disableScroll() {
+        var ycoord = $(window).scrollTop();
+        $(".c-header").data("ycoord", ycoord);
+        ycoord = ycoord * -1;
+        $("body")
+            .css("position", "fixed")
+            .css("left", "0px")
+            .css("right", "0px")
+            .css("top", ycoord + "px");
+        $(".c-header")
+            .css("position", "fixed")
+            .css("left", "0px")
+            .css("right", "0px")
+            .css("top", "0px");
+    }
+    function enableScroll() {
+        $("body")
+            .css("position", "")
+            .css("left", "auto")
+            .css("right", "auto")
+            .css("top", "auto");
+        $(window).scrollTop($(".c-header").data("ycoord"));
+    }
     //ハンバーガーボタンクリック
     $menuButton.click(function () {
-        if ($(this).hasClass('is-open')) {
-            $(this).removeClass('is-open');
-            $('.c-header__item.is-hover').removeClass('is-open');
+        if ($('.c-nav').hasClass('is-open')) {
+            $('.c-nav').removeClass('is-open');
+            enableScroll();
         } else {
-            $(this).addClass('is-open');
+            $('.c-nav').addClass('is-open');
+            disableScroll();
         }
     });
-
-    //SPメニュー内アコーディオン
-    $(".c-header__item.is-hover").click(function (e) {
-        if (!desktopMode) {
-            if ($(this).hasClass('is-open')) {
-                $(this).removeClass('is-open');
-            } else {
-                $(this).addClass('is-open');
-            }
-        }
-    });
+    $('.c-nav__link').click(function () {
+        $('.c-nav').removeClass('is-open');
+        enableScroll();
+    })
+    $('.c-close').click(function () {
+        $('.c-nav').removeClass('is-open');
+        enableScroll();
+    })
     //
     // pagetop
     //------------------------------------
