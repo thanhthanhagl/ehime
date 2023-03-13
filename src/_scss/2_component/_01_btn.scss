@@ -6,11 +6,11 @@ btn
 ------------------------------------------------------------*/
 .c-back {
     display: block;
-    max-width: 450px;
+    max-width: 410px;
     width: 100%;
-    margin: 50px auto;
+    margin: 16.5% auto 0;
     background-color: $brand-color;
-    padding: 20px;
+    padding: 17px 20px;
     font-weight: 700;
     font-size: 1.6rem;
     letter-spacing: 0;
@@ -21,6 +21,11 @@ btn
     transition: 0.3s all;
     position: relative;
     text-align: center;
+    @include sp {
+        width: inherit;
+        padding: 17px 10px;
+        font-size: 1.4rem;
+    }
 
     &::before {
         content: "";
@@ -33,7 +38,14 @@ btn
         position: absolute;
         top: 50%;
         left: 20px;
-        transform: translateY(-50%);
+        transform: translateY(-50%) rotate(180deg);
+    }
+    &--submit{
+        &::before{
+            transform: translateY(-50%);
+            left:unset;
+            right: 20px;
+        }
     }
 }
 

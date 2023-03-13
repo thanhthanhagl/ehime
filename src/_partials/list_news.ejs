@@ -1,0 +1,14 @@
+<!-- start list news -->
+<div class="c-news">
+    <div class="l-container l-container--w780">
+        <div class="c-news__main">
+            <% if(typeof news !='undefined' ){ news.forEach(item=> { %>
+                <a href="./news_single.html" class="c-news__item">
+                    <div class="c-news__date"><%=item.date %></div>
+                    <div class="c-news__ptitle"><%=item.title %></div>
+                </a>
+                <%})}%>
+        </div>
+    </div>
+</div>
+<!-- end list news -->

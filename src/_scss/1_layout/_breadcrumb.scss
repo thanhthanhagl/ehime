@@ -4,6 +4,9 @@
     .c-breadcrumb__list {
         padding: 25px 0 33px;
         border-bottom: 1px solid #ccc;
+        @include sp {
+            padding: 25px 0;
+        }
     }
 
     .c-breadcrumb__item {
@@ -15,6 +18,10 @@
         color: $brand-color;
         text-decoration: underline;
         text-underline-offset: 7px;
+        @include sp {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
 
         &:first-child {
             &::before {
@@ -26,6 +33,9 @@
         &:last-child {
             color: #000;
             text-decoration: none;
+            @include sp {
+                margin-bottom: 0;
+            }
         }
 
         &::before {
@@ -33,7 +43,9 @@
             margin: 0 15px;
             color: #000;
             display: inline-block;
+            @include sp {
+                margin: 0 10px;
+            }
         }
     }
-} 
-  
+}

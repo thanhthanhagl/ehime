@@ -1,7 +1,115 @@
-<%- include('_layouts/layout', {
-    title: 'お問い合わせ', name:'お問い合わせ', id:'p-contact', subname:'contact',category:'',breadcrumb:'お問い合わせ'
-}); -%>
-
-<!-- @content -->
+<%- include('_layouts/layout', { title: 'お問い合わせ' , name:'contact', id:'p-contact',
+    subname:'お問い合わせ',category:'',breadcrumb:'お問い合わせ' }); -%>
+    <!-- @meta -->
+    <meta name="description" content="お問い合わせ">
+    <!-- @@meta -->
+    <!-- @content -->
+    <section class="c-contact">
+        <div class="l-container l-container--w780">
+            <h2 class="c-contact__title">一般･学生の皆様へ</h2>
+            <div class="c-contact__desc">この度は愛媛シゴト図鑑をご覧いただきありがとうございます。<br>
+                愛媛シゴト図鑑を見て疑問に思ったこと、ご質問等ございましたら下記の問い合わせフォームにて意見をお寄せください。少し聞きづらいなと思うようなことも遠慮なくご質問ください。愛媛シゴト図鑑は頑張る就活生を応援しています！<br>
+                個人情報の取扱に関しましては、<span class="u-blue u-bold">プライバシーポリシー</span>をご確認ください。<br>
+                <span class="u-red">※は入力必須です。</span>
+            </div>
+            <div class="c-form">
+                <form class="c-form__content" action="#" method="post" novalidate="novalidate">
+                    <label class="c-form__error">入力内容を確認してください。</label>
+                    <div class="c-form__form">
+                        <div class="c-form__tr">
+                            <div class="c-form__th">
+                                <label for="name" class="c-form__label">氏名<span class="u-red">※</span></label>
+                            </div>
+                            <div class="c-form__td">
+                                <input type="text" id="name" name="name" class="c-form__input c-form__input--small"
+                                    aria-required="true">
+                            </div>
+                        </div>
+                        <div class="c-form__tr">
+                            <div class="c-form__th">
+                                <label for="company" class="c-form__label">会社・学校名</label>
+                            </div>
+                            <div class="c-form__td">
+                                <input type="text" id="company" name="company"
+                                    class="c-form__input c-form__input--small">
+                            </div>
+                        </div>
+                        <div class="c-form__tr">
+                            <div class="c-form__th">
+                                <label for="address" class="c-form__label">住所</label>
+                            </div>
+                            <div class="c-form__td">
+                                <input type="text" id="address" name="address" class="c-form__input">
+                            </div>
+                        </div>
+                        <div class="c-form__tr">
+                            <div class="c-form__th">
+                                <label for="phone" class="c-form__label">電話番号<span class="u-red">※</span></label>
+                            </div>
+                            <div class="c-form__td">
+                                <input type="text" id="phone" name="phone" class="c-form__input c-form__input--small"
+                                    aria-required="true">
+                            </div>
+                        </div>
+                        <div class="c-form__tr">
+                            <div class="c-form__th">
+                                <label for="email" class="c-form__label">メールアドレス<span class="u-red">※</span></label>
+                            </div>
+                            <div class="c-form__td">
+                                <input type="email" id="email" name="email" class="c-form__input c-form__input--small"
+                                    aria-required="true">
+                            </div>
+                        </div>
+                        <div class="c-form__tr">
+                            <div class="c-form__th">
+                                <label for="checkbox" class="c-form__label">本サイトを知ったきっかけ</label>
+                            </div>
+                            <div class="c-form__td">
+                                <div class="c-form__group">
+                                    <div class="c-form__option">
+                                        <input type="checkbox" id="option1" name="option1" value="検索">
+                                        <label class="c-form__optlabel" for="option1">検索</label>
+                                    </div>
+                                    <div class="c-form__option">
+                                        <input type="checkbox" id="option2" name="option2" value="冊子">
+                                        <label class="c-form__optlabel" for="option2">冊子</label>
+                                    </div>
+                                    <div class="c-form__option">
+                                        <input type="checkbox" id="option3" name="option3" value="ネット広告">
+                                        <label class="c-form__optlabel" for="option3">ネット広告</label>
+                                    </div>
+                                    <div class="c-form__option"><input type="checkbox" id="option4" name="option4"
+                                            value="口コミ">
+                                        <label class="c-form__optlabel" for="option4">口コミ</label>
+                                    </div>
+                                    <div class="c-form__option"><input type="checkbox" id="option5" name="option5"
+                                            value="チラシ">
+                                        <label class="c-form__optlabel" for="option5">チラシ</label>
+                                    </div>
+                                </div>
+                                <div class="c-form__group">
+                                    <div class="c-form__optionother">
+                                        <input type="checkbox" id="option6" name="option6" value="検索">
+                                        <label class="c-form__optlabel" for="option6">検索</label>
+                                    </div>
+                                    <input disabled type="text" id="inputoption6" name="option6" class="c-form__input c-form__input--medium">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="c-form__tr">
+                            <div class="c-form__th">
+                                <label for="note" class="c-form__label">お問い合わせ内容<span class="u-red">※</span></label>
+                            </div>
+                            <div class="c-form__td">
+                                <textarea id="note" name="note" class="c-form__input c-form__textarea" cols="30"
+                                    rows="10" aria-required="true"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="c-form__bottom"><button class="c-back c-back--submit" type="submit">この内容で送信する</button></div>
+            </div>
+        </div>
+    </section>
     </main>
-<!-- @@content -->
+    <!-- @@content -->
