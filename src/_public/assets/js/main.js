@@ -5,6 +5,23 @@ jQuery(function ($) {
     var $body = $('body'),
         $header = $('.c-header'),
         $menuButton = $('.c-menu');
+    //
+    //mainvisual
+    //-------------------------------------
+    $('.c-mainvisual__list').slick({
+      infinite: true,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      speed: 2000,
+      slidesToShow: 1,
+      dots: false,
+      arrows: false,
+      pauseOnFocus: false,
+      pauseOnHover: false,
+      pauseOnDotsHover: false,
+      slidesToScroll: 1,
+      fade: true
+    })
 
     //
     // header-menu
@@ -99,7 +116,7 @@ jQuery(function ($) {
       },
       "phone": {
         required: "『電話番号』を入力してください。",
-        fnType: "00-0000-0000"
+        fnType: "例: 000-000-0000"
       },
       "note": {
         required: "『お問い合わせ内容』を入力してください。"
@@ -107,7 +124,7 @@ jQuery(function ($) {
     }
   });
   $.validator.addMethod('fnType', function (value) {
-    return value.match(/\(?([0-9]{2})\)?([ .-]?)([0-9]{4})\2([0-9]{4})/);
+    return value.match(/\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/);
   }, 'Enter Valid  phone number');
   $('.c-form__input').blur(function () {
     if ($(this).val().length == 0) {
@@ -117,9 +134,8 @@ jQuery(function ($) {
       $(this).nextAll('.c-form__error').removeClass('is-error');
     }
   });
-  $(".c-back--submit").click(function () {
+  $(".c-submit").click(function () {
     if($(".c-form__content").valid()){
-      alert("縺秘未蠢�ｒ縺雁ｯ�○縺�◆縺�縺阪≠繧翫′縺ｨ縺�＃縺悶＞縺ｾ縺吶ゅ〒縺阪ｋ縺�縺第掠縺上＃騾｣邨｡縺�◆縺励∪縺吶�");
       window.location.reload();
     }
     else{

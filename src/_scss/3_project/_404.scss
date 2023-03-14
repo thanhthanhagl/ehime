@@ -1,0 +1,24 @@
+/*------------------------------------------------------------
+Css of 404 page
+------------------------------------------------------------*/
+.p-404 {
+    .p-404__content {
+        padding: 80px 0;
+
+        @include tab {
+            padding: 50px;
+        }
+    }
+
+    .p-404__text {
+        font-weight: 400;
+        text-align: center;
+        font-size: 1.8rem;
+        letter-spacing: 0;
+        line-height: 1.5;
+    }
+
+    .p-404__btnback {
+        margin: 30px auto 0;
+    }
+}

@@ -1,0 +1,92 @@
+.c-mainvisual {
+    position: relative;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    max-height: 700px;
+    @include sp {
+        max-height: 374px;
+    }
+
+    .c-mainvisual__item {
+        width: 100%;
+        padding-bottom: 700px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        @include sp {
+            padding-bottom: 374px;
+        }
+
+        &:nth-child(1) {
+            background-image: url(./assets/img/common/img_mainvisual01.jpg);
+            @include sp {
+                background-image: url(./assets/img/common/img_mainvisual01_sp.jpg);
+            }
+        }
+
+        &:nth-child(2) {
+            background-image: url(./assets/img/common/img_mainvisual02.jpg);
+            @include sp {                
+                background-image: url(./assets/img/common/img_mainvisual02_sp.jpg);
+            }
+        }
+
+        &:nth-child(3) {
+            background-image: url(./assets/img/common/img_mainvisual03.jpg);
+            @include sp {                
+                background-image: url(./assets/img/common/img_mainvisual03_sp.jpg);
+            }
+        }
+
+        &:nth-child(4) {
+            background-image: url(./assets/img/common/img_mainvisual04.jpg);
+            @include sp {                
+                background-image: url(./assets/img/common/img_mainvisual04_sp.jpg);
+            }
+        }
+    }
+
+    .c-mainvisual__inner {
+        position: absolute;
+        bottom: -12%;
+        left: 34.4%;
+        transform: translate(-50%, -50%);
+        @include sp {
+            left: 50.2%;
+            bottom: -15%;
+        }
+    }
+
+    .c-mainvisual__innerimg {
+        margin-bottom: 2.2em;
+        @include tab {
+            margin-bottom: 1.2em;
+            max-width: 375px;
+        }
+        @include sp {
+            max-width: 279px;
+            margin-bottom: 35px;
+        }
+    }
+
+    .c-mainvisual__innertext {
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 3px;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1;
+        color: #fff;
+        letter-spacing: 0;
+        font-feature-settings: "palt" 1;
+        padding: 7px 10px 8px;
+        @include tab {
+            font-size: 1.6rem;
+        }
+        @include sp {
+            width: 290px;
+            padding: 4px 17px 5px;
+        }
+    }
+}

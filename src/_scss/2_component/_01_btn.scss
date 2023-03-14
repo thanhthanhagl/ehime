@@ -21,10 +21,16 @@ btn
     transition: 0.3s all;
     position: relative;
     text-align: center;
+    cursor: pointer;
     @include sp {
         width: inherit;
         padding: 17px 10px;
         font-size: 1.4rem;
+    }
+
+    &:hover {
+        opacity: 1;
+        box-shadow: none;
     }
 
     &::before {
@@ -39,13 +45,56 @@ btn
         top: 50%;
         left: 20px;
         transform: translateY(-50%) rotate(180deg);
+        transition: 0.3s all;
     }
-    &--submit{
-        &::before{
-            transform: translateY(-50%);
-            left:unset;
-            right: 20px;
-        }
+}
+
+.c-submit {
+    cursor: pointer;
+    display: block;
+    max-width: 450px;
+    width: 100%;
+    margin: 50px auto 0;
+    background-color: $brand-color;
+    padding: 17px 20px;
+    font-weight: 700;
+    font-size: 1.6rem;
+    letter-spacing: -0.5px;
+    line-height: 1.6;
+    color: #fff;
+    z-index: 1;
+    box-shadow: 4px 4px #000;
+    transition: 0.3s all;
+    position: relative;
+    left: -2px;
+    text-align: center;
+    @include tab {
+        letter-spacing: 0;
+        left: 0;
+    }
+    @include sp {
+        padding: 17px 10px;
+        font-size: 1.4rem;
+    }
+
+    &:hover {
+        opacity: 1;
+        box-shadow: none;
+    }
+
+    &::before {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-image: url("./assets/img/common/arrow.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        transition: 0.3s all;
     }
 }
 

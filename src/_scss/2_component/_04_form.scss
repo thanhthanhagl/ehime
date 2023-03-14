@@ -131,29 +131,13 @@ form
         margin: 0;
         vertical-align: top;
     }
-
-    .c-form__bottom {
-        .c-back {
-            margin: 50px auto 0;
-            max-width: 450px;
-            letter-spacing: -0.5px;
-            position: relative;
-            left: -2px;
-            width: 100%;
-
-            @include tab {
-                letter-spacing: 0;
-                left: 0;
-            }
-        }
-    }
 }
 
 .c-form.is-error {
     transition: 0.3s all;
     padding-top: 17px;
     margin-bottom: -93px;
-    @include tab{
+    @include tab {
         margin-bottom: 0;
     }
 
@@ -163,9 +147,10 @@ form
         font-size: 1.4rem;
         line-height: 1.79;
         letter-spacing: 0.1em;
-        color: #ff0000;
+        color: #f00;
         margin: 0 0 14px;
     }
+
     .c-form__tr {
         &:last-child {
             .error {
@@ -182,7 +167,7 @@ form
     font-size: 1.4rem;
     line-height: 1.79;
     letter-spacing: 0.1em;
-    color: #ff0000;
-    margin-bottom: -6px;  
+    color: #f00;
+    margin-bottom: -6px;
     padding-top: 10px;  
 }

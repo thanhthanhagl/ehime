@@ -8,14 +8,32 @@
     <div class="c-breadcrumb">
         <div class="l-container l-container--w1160">
             <ul class="c-breadcrumb__list">
-                <li class="c-breadcrumb__item"><a href="<%= BASE_URL %>index.html"
-                        class="c-breadcrum__text">ホーム</a></li>
+                <li class="c-breadcrumb__item"><a href="<%= BASE_URL %>index.html" class="c-breadcrum__text">ホーム</a>
+                </li>
                 <% if(category) {%>
-                    <li class="c-breadcrumb__item"><a href="<%- catlink -%>" class="c-breadcrum__text"><%-
-                                category -%></a></li>
+                    <li class="c-breadcrumb__item"><a href="<%- catlink -%>" class="c-breadcrum__text"><%- category
+                                -%></a></li>
                     <% }%>
                         <li class="c-breadcrumb__item"><span class="c-breadcrum__text"><%- breadcrumb -%></span></li>
             </ul>
         </div>
     </div>
-    <% } %>
+    <% } else{ %>
+        <section class="c-mainvisual">
+            <div class="c-mainvisual__list">
+                <div class="c-mainvisual__item"></div>
+                <div class="c-mainvisual__item"></div>
+                <div class="c-mainvisual__item"></div>
+                <div class="c-mainvisual__item"></div>
+            </div>
+            <div class="c-mainvisual__inner">
+                <h1 class="c-mainvisual__innerimg">
+                    <picture>
+                        <source media="(max-width:767px)" srcset="./assets/img/common/mv_catch_sp.png">
+                        <img src="./assets/img/common/mv_catch.png" alt="ehime shigoto zukan mainvisual catch">
+                    </picture>
+                </h1>
+                <div class="c-mainvisual__innertext">2020年卒学生向けの企業紹介サイト</div>
+            </div>
+        </section>
+        <%}%>
